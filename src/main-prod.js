@@ -1,10 +1,10 @@
-// 开发阶段
+// 生产阶段
 import Vue from 'vue'
 import App from './App.vue'
 import store from './store/index.js'
 import router from './router'
-// import route from './route'
-import './plugins/element.js'
+
+// import './plugins/element.js'
 import './assets/css/global.css'
 // import './assets/fonts/iconfont.css'
 import axios from 'axios'
@@ -13,9 +13,12 @@ import TreeTable from 'vue-table-with-tree-grid'
 import VueQuillEditor from 'vue-quill-editor'
 
 // 导入富文本编辑器需要的样式
-import 'quill/dist/quill.core.css'
-import 'quill/dist/quill.snow.css'
-import 'quill/dist/quill.bubble.css'
+// 这个地方不导入,改用 cdn 来加载样式
+/*
+    import 'quill/dist/quill.core.css'
+    import 'quill/dist/quill.snow.css'
+    import 'quill/dist/quill.bubble.css'
+*/
 
 import 'xe-utils'
 import VXETable from 'vxe-table'

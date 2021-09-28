@@ -20,7 +20,11 @@
 
         <!-- 密码 -->
         <el-form-item prop="password">
-          <el-input v-model="loginForm.password" prefix-icon="el-icon-lock" type="password"></el-input>
+          <el-input
+            v-model="loginForm.password"
+            prefix-icon="el-icon-lock"
+            type="password"
+          ></el-input>
         </el-form-item>
 
         <!-- 按钮区域 -->
@@ -71,7 +75,7 @@ export default {
       this.$refs.loginFormRef.validate(async (valid) => {
         // console.log(valid);
         if (!valid) return
-        const { data: res } = await this.$http.post('login', this.loginForm)
+        const { data: res } = await this.$http.post('/login', this.loginForm)
         // this.$http.post('login',this.loginForm).then(function(ret){
         //   console.log(ret.data);
         // })
