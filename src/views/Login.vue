@@ -75,10 +75,12 @@ export default {
       this.$refs.loginFormRef.validate(async (valid) => {
         // console.log(valid);
         if (!valid) return
-        const { data: res } = await this.$http.post('/login', this.loginForm)
-        // this.$http.post('login',this.loginForm).then(function(ret){
-        //   console.log(ret.data);
+        const { data: res } = await this.$http.post('login', this.loginForm)
+
+        // this.$http.post('login',this.loginForm).then(
+
         // })
+
         if (res.meta.status !== 200) return this.$message.error('登录失败！')
         this.$message.success('登录成功')
         // 1. 将登录成功之后的 token，保存到客户端的 sessionStorage 中

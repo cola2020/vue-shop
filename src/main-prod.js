@@ -22,12 +22,14 @@ import VueQuillEditor from 'vue-quill-editor'
 
 import 'xe-utils'
 import VXETable from 'vxe-table'
-import 'vxe-table/lib/style.css'
+// import 'vxe-table/lib/style.css'
 
 Vue.use(VXETable)
 
 // axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1'
+// axios.defaults.baseURL = 'http://121.41.113.77:8889/api/private/v1'
 axios.defaults.baseURL = 'https://lianghj.top:8888/api/private/v1'
+
 
 axios.interceptors.request.use(config => {
     // console.log(config);

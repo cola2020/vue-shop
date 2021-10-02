@@ -16,7 +16,8 @@ module.exports = {
         lodash: '_',
         echarts: 'echarts',
         // nprogress: 'NProgress',
-        'vue-quill-editor': 'VueQuillEditor'
+        'vue-quill-editor': 'VueQuillEditor',
+        'vxe-table' : 'VXETable'
       })
 
       // 
