@@ -10,7 +10,7 @@ vue-shop 是基于 vue 的 pc 端项目，所使用到的技术有
 
 1. vue vue-Router vueX
 2. axios
-3. vant-ui
+3. element-ui
 4. Echarts
 
 ### 基本功能
