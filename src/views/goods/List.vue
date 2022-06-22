@@ -97,14 +97,12 @@ export default {
   methods: {
     // 监听页面显示数据条数变化
     handleSizeChange(newSize) {
-      //   console.log(newSize)
       this.queryInfo.pagesize = newSize
       this.getGoodsList()
     },
 
     // 监听页码的变化
     handleCurrentChange(newCurrent) {
-      //   console.log(newCurrent)
       this.queryInfo.pagenum = newCurrent
       this.getGoodsList()
     },
@@ -115,14 +113,12 @@ export default {
         params: this.queryInfo,
       })
 
-      // console.log(res)
 
       if (res.meta.status !== 200) {
         return this.$message.error('获取商品列表失败！')
       }
       this.total = res.data.total
       this.goodsList = res.data.goods
-      // console.log(this.goodsList);
     },
 
     // 查询商品
@@ -133,9 +129,7 @@ export default {
 
     // 显示修改商品的对话框
     async showEditGoodsDialog(id) {
-      // console.log(id);
       const { data: res } = await this.$http.get('goods/' + id)
-      console.log(res)
       this.editGoodsdDialogVisible = true
     },
 
@@ -153,12 +147,10 @@ export default {
       }).catch((error) => {
         return error
       })
-      console.log(confirmResult)
       if (confirmResult !== 'confirm') {
         return this.$message.info('已取消删除！')
       }
 
-      console.log(id)
       const { data: res } = await this.$http.delete('goods/' + id)
       if (res.meta.status !== 200) {
         return this.$message.error('删除失败！')
@@ -175,14 +167,12 @@ export default {
     async editById(id) {
       // 根据id查询商品
       const { data: res } = await this.$http.get(`goods/${id}`)
-      console.log(res)
 
       // 获取商品失败 提示用户
       if (res.meta.status !== 200) return this.$message.error('获取商品数据失败！')
 
       // 获取成功 保存数据到vuex
       this.$store.commit('setGoodInfo', res.data)
-      console.log(this.$store.state.goodInfo)
       // 跳转到edit组件
       this.$router.push('/goods/edit')
     },

@@ -12,6 +12,7 @@ import TreeTable from 'vue-table-with-tree-grid'
 // 导入富文本编辑器
 import VueQuillEditor from 'vue-quill-editor'
 
+
 // 导入富文本编辑器需要的样式
 import 'quill/dist/quill.core.css'
 import 'quill/dist/quill.snow.css'
@@ -23,7 +24,6 @@ import 'vxe-table/lib/style.css'
 
 Vue.use(VXETable)
 
-// axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1'
 axios.defaults.baseURL = 'https://lianghj.top:8888/api/private/v1'
 
 axios.interceptors.request.use(config => {

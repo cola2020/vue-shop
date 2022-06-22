@@ -14,20 +14,19 @@ import VueQuillEditor from 'vue-quill-editor'
 
 // 导入富文本编辑器需要的样式
 // 这个地方不导入,改用 cdn 来加载样式
-/*
-    import 'quill/dist/quill.core.css'
-    import 'quill/dist/quill.snow.css'
-    import 'quill/dist/quill.bubble.css'
-*/
+
+import 'quill/dist/quill.core.css'
+import 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.bubble.css'
+
 
 import 'xe-utils'
 import VXETable from 'vxe-table'
-// import 'vxe-table/lib/style.css'
+import 'vxe-table/lib/style.css'
 
 Vue.use(VXETable)
 
-// axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1'
-// axios.defaults.baseURL = 'http://121.41.113.77:8889/api/private/v1'
+
 axios.defaults.baseURL = 'https://lianghj.top:8888/api/private/v1'
 
 
@@ -49,15 +48,12 @@ Vue.component('tree-table', TreeTable)
 
 Vue.filter('dateFormat', function (originVal) {
     const dt = new Date(originVal)
-
     const y = dt.getFullYear()
     const m = (dt.getMonth() + 1 + '').padStart(2, '0')
     const d = (dt.getDate() + '').padStart(2, '0')
-
     const hh = (dt.getHours() + '').padStart(2, '0')
     const mm = (dt.getMinutes() + '').padStart(2, '0')
     const ss = (dt.getSeconds() + '').padStart(2, '0')
-
     return `${y}-${m}-${d} ${hh}:${mm}:${ss}`
 })
 

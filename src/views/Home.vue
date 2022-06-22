@@ -158,9 +158,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-/*body {
-  background-color: yellow;
-}*/
 .el-header {
   background-color: #2c3e50;
   display: flex;
